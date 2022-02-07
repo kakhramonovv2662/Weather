@@ -285,4 +285,27 @@ body {
   background-color: #030c1b;
   color: #fff;
 }
+
+.hero__temprature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 100px;
+}
+
+.hero__value {
+  display: block;
+  margin-right: 50px;
+}
+
+.info-wrapper {
+  display: none;
+}
+
+.back-btn {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

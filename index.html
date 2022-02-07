@@ -7,32 +7,52 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
-      <form class="hero__form js-form">
-        <input class="hero__input js-input" type="text">
-
-        <button class="hero__button" type="submit">submit</button>
-      </form>
       <main>
         <section class="hero">
           <div class="container hero__container">
+            <form class="hero__form js-form">
+              <input class="hero__input js-input" type="text">
+      
+              <button class="hero__button js-submit-btn" type="submit">submit</button>
+            </form>
 
-            <!-- <div class="hero__wrapper js-wrapper">
-              <button class="hero__exit-btn js-btn">Toshkent</button>
-              <button class="hero__exit-btn">Andijon</button>
-              <button class="hero__exit-btn">Fargona</button>
-              <button class="hero__exit-btn">Namangan</button>
-              <button class="hero__exit-btn">Buxoro</button>
-              <button class="hero__exit-btn">Qashqadaryo</button>
-              <button class="hero__exit-btn">Surxandaryo</button>
-              <button class="hero__exit-btn">Jizzax</button>
-              <button class="hero__exit-btn">Sirdaryo</button>
-              <button class="hero__exit-btn">Navoiy</button>
-              <button class="hero__exit-btn">Xorazm</button>
-            </div> -->
+            <div class="hero__wrapper js-wrapper">
+              <button type="button" class="hero__exit-btn">Toshkent</button>
+              <button type="button" class="hero__exit-btn ">Andijon</button>
+              <button type="button" class="hero__exit-btn">Fargona</button>
+              <button type="button" class="hero__exit-btn">Namangan</button>
+              <button type="button" class="hero__exit-btn">Buxoro</button>
+              <button type="button" class="hero__exit-btn">Qashqadaryo</button>
+              <button type="button" class="hero__exit-btn">Surxandaryo</button>
+              <button type="button" class="hero__exit-btn">Jizzax</button>
+              <button type="button" class="hero__exit-btn">Sirdaryo</button>
+              <button type="button" class="hero__exit-btn">Navoiy</button>
+              <button type="button" class="hero__exit-btn">Xorazm</button>
+            </div>
+
+            <div class="hero__temprature">
+              <div>
+                  <span class="hero__value hero__weath">weather:</span>
+                  <span class="hero__value hero__temp">temp:</span>
+                  <span class="hero__value hero__feels">feels_like:</span>
+                  <span class="hero__value hero__speed">speed:</span>
+                  <span class="hero__value hero__deg">deg:</span>
+              </div>
+              <div>
+                  <span class="hero__value first__value js-weath"></span>
+                  <span class="hero__value second__value js-temp"></span>
+                  <span class="hero__value three__value js-feels"></span>
+                  <span class="hero__value four__value js-speed"></span>
+                  <span class="hero__value five__value js-deg"></span>
+              </div>
+          </div>
           </div>
         </section>
       </main>
 
+      <button class="hero__back-btn js-exit-btn back-btn" type="button">Back</button>
+
         <script src="js/index.js"></script>
+        <script src="js/info.js"></script>
     </body>
 </html>

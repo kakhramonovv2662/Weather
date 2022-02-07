@@ -57,4 +57,23 @@
     background-color: #030c1b;
     color: #fff;
   }
+
+  &__temprature {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+  }
+
+  &__value {
+    display: block;
+    margin-right: 50px;
+  }
+}
+
+.info-wrapper {
+  display: none;
+}
+
+.back-btn {
+  display: none;
 }
