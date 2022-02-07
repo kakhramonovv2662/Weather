@@ -3,8 +3,6 @@
 // elWrapper.addEventListener("click", submitBtn);
 let exitBtn = document.querySelector(".js-exit-btn");
 
-function backBtn() {
-  window.location = "https://weather-about.netlify.app/index.html";
-}
+function backBtn() {}
 
 exitBtn.addEventListener("click", backBtn);

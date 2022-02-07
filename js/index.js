@@ -36,8 +36,6 @@ function submitBtn(evt) {
           );
       })
     );
-
-  window.location = "https://weather-about.netlify.app/info.html";
 }
 elWrapper.addEventListener("click", submitBtn);
 
