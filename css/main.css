@@ -445,7 +445,6 @@ button:active {
   display: block;
   margin-top: 25px;
   margin-bottom: 25px;
-  color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,5 +454,9 @@ button:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 2px solid blue;
+  padding: 10px;
+  background-color: blue;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
