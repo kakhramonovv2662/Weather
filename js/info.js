@@ -18,11 +18,12 @@ let localstrogeLat = localStorage.getItem('lat')
 let localstrogeLon = localStorage.getItem('lon')
 
 fetch(
-  `http://api.openweathermap.org/data/2.5/weather?lat=${localstrogeLat}&lon=${localstrogeLon}&appid=20f9bba5f85da5ce36767f2e2ee73f95`
+  `https://api.openweathermap.org/data/2.5/weather?lat=${localstrogeLat}&lon=${localstrogeLon}&appid=20f9bba5f85da5ce36767f2e2ee73f95`
 )
   .then((res) => res.json())
   .then(
     (data) => (
+      console.log(data),
       wealthValue.textContent = data.weather[0].main,
       tempValue.textContent = data.main.temp + " temp",
       feelsValue.textContent = data.main.feels_like + " feels",
@@ -32,7 +33,7 @@ fetch(
   );
 
 function backBtn() {
-  window.location = "https://weather-about.netlify.app/index.html";
+  window.location = "\/index.html";
 }
 
 exitBtn.addEventListener("click", backBtn);
