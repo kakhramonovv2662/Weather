@@ -18,4 +18,16 @@ body {
     flex-direction: column;
     font-size: 16px;
     line-height: 1.5;
+    background-color: aqua;
+}
+
+button {
+    &:hover {
+        opacity: 0.9;
+        background-color: rgb(3, 3, 31);
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
 }

@@ -8,42 +8,69 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    
-    <button class="hero__back-btn js-exit-btn" type="button">Back</button>
+    <div class="father">
+            <div>
+                <img class="hero__weather-img js-img" src="img/img-quyosh.png" alt="weather-img" width="400" height="400">
+                <img class="hero__rain-img  js-rain-img" src="img/img-rain.png" alt="weather-img" width="400" height="400">
+                <img class="hero__winter-img  js-winter-img" src="img/img-winter.png" alt="weather-img" width="400" height="400">
+            </div>
 
-    <div class="hero__temprature">
-        <div>
-            <span class="hero__value hero__weath">weather:</span>
-            <span class="hero__value hero__temp">temp:</span>
-            <span class="hero__value hero__feels">feels_like:</span>
-            <span class="hero__value hero__speed">speed:</span>
-            <span class="hero__value hero__deg">deg:</span>
-        </div>
-        <div>
-            <span class="hero__value first__value js-weath">qalay</span>
-            <span class="hero__value second__value js-temp">salom</span>
-            <span class="hero__value three__value js-feels">yaxw</span>
-            <span class="hero__value four__value js-speed">whayr</span>
-            <span class="hero__value five__value js-deg">wvolekum</span>
-        </div>
-    </div>
+            <div class="father__wrapper">
+                <div class="father__info">
+                    <div class="father__weather hero__value hero__weath">
+                        <span class="father__weather-text">
+                            weather
+                        </span>
+                        <img class="father__weather-img js-weather-img" src="img/cloudy.png" alt="sovuq" width="25" height="25">
+                    </div>
+                    <div class="father__weather hero__value hero__temp">
+                        <span class="father__weather-text">
+                            temp 
+                        </span>
+                        <img src="img/temperature.png" alt="temp-img" width="25" height="25">
+                    </div>
+                    <div class="father__weather hero__value hero__feels">
+                        <span class="father__weather-text">
+                            feels_like
+                        </span>
+                        <img src="img/map.png" alt="map icon" width="25" height="25">
+                    </div>
+                    <div class="father__weather hero__value hero__speed">
+                        <span class="father__weather-text">
+                            speed
+                        </span>
 
-    <div class="hero__wrapper js-wrapper info-wrapper">
-        <button type="button" class="hero__exit-btn">Toshkent</button>
-        <button type="button" class="hero__exit-btn ">Andijon</button>
-        <button type="button" class="hero__exit-btn">Fargona</button>
-        <button type="button" class="hero__exit-btn">Namangan</button>
-        <button type="button" class="hero__exit-btn">Buxoro</button>
-        <button type="button" class="hero__exit-btn">Qashqadaryo</button>
-        <button type="button" class="hero__exit-btn">Surxandaryo</button>
-        <button type="button" class="hero__exit-btn">Jizzax</button>
-        <button type="button" class="hero__exit-btn">Sirdaryo</button>
-        <button type="button" class="hero__exit-btn">Navoiy</button>
-        <button type="button" class="hero__exit-btn">Xorazm</button>
-      </div>
+                        <img src="img/stopwatch.png" alt="speed-img" width="25" height="25">
+                    </div>
+                    <div class="father__weather hero__value hero__deg">
+                        <span class="father__weather-text">
+                            deg
+                        </span>
 
+                        <img src="img/360-degrees.png" alt="deg-img" width="25" height="25">
+                    </div>
+                </div>
+                <div class="father__info">
+                    <div class="father__weather hero__value hero__weath">
+                        <span class="father__weather-text  hero__value js-weath"></span>
+                    </div>
+                    <div class="father__weather hero__value hero__temp">
+                        <span class="hero__value second__value js-temp"></span>
+                    </div>
+                    <div class="father__weather hero__value hero__feels">
+                        <span class="hero__value three__value js-feels"></span>
+                    </div>
+                    <div class="father__weather hero__value hero__speed">
+                        <span class="hero__value four__value js-speed"></span>
+                    </div>
+                    <div class="father__weather hero__value hero__deg">
+                        <span class="hero__value five__value js-deg"></span>
+                    </div>
+                </div>
+            </div>
+            <button class="hero__back-btn js-exit-btn" type="button">Back</button>
+   </div>
 
-      <script src="js/index.js"></script>
       <script src="js/info.js"></script>
 
 </body>

@@ -4,11 +4,12 @@ let elForm = document.querySelector(".js-form");
 const elInput = document.querySelector(".js-input");
 const elBtn = document.querySelector(".js-submit-btn");
 
-let wealthValue = document.querySelector(".js-weath");
-let tempValue = document.querySelector(".js-temp");
-let feelsValue = document.querySelector(".js-feels");
-let speedValue = document.querySelector(".js-speed");
-let degValue = document.querySelector(".js-deg");
+let elList = document.querySelector('.hero__list')
+let elListItems = document.querySelector('.js__items')
+let elListText = document.querySelector('.js__texts')
+let elListSecondText = document.querySelector('.js__second-texts')
+let elListThreeText = document.querySelector('.js__three-texts')
+
 
 let countyBtn = document.querySelector(".js-btn");
 
@@ -19,102 +20,57 @@ function submitBtn(evt) {
     .then((res) => res.json())
     .then((data) =>
       data.forEach((value) => {
-        let elLat = (evt.target.dataset.lat = value.lat);
-        let elLon = (evt.target.dataset.lon = value.lon);
-        fetch(
-          `http://api.openweathermap.org/data/2.5/weather?lat=${elLat}&lon=${elLon}&appid=20f9bba5f85da5ce36767f2e2ee73f95`
-        )
-          .then((res) => res.json())
-          .then(
-            (data) => (
-              (wealthValue.textContent = data.weather[0].description),
-              (tempValue.textContent = data.main.temp + " temp"),
-              (feelsValue.textContent = data.main.feels_like + " feels"),
-              (speedValue.textContent = data.wind.speed + " km"),
-              (degValue.textContent = data.wind.deg + " deg")
-            )
-          );
+        console.log(value);
       })
     );
+
+    let elLat = evt.target.dataset.lat
+    let elLon = evt.target.dataset.lon
+
+    localStorage.setItem('lat', elLat)
+    localStorage.setItem('lon', elLon)
+
+    window.location = 'https://weather-about.netlify.app/info.html'
 }
 elWrapper.addEventListener("click", submitBtn);
 
+function clickBtn(evt) {
+
+  localStorage.setItem('lat', evt.target.dataset.lat)
+  localStorage.setItem('lon', evt.target.dataset.lon)
+
+  window.location = 'https://weather-about.netlify.app/info.html'
+}
+
 function handleClick(evt) {
-  evt.preventDefault();
+  elList.textContent = null
 
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${elInput.value}&limit=1&appid=20f9bba5f85da5ce36767f2e2ee73f95`
+    `http://api.openweathermap.org/geo/1.0/direct?q=${evt.target.value}&limit=5&appid=20f9bba5f85da5ce36767f2e2ee73f95`
   )
     .then((res) => res.json())
     .then((data) =>
       data.forEach((value) => {
-        fetch(
-          `http://api.openweathermap.org/data/2.5/weather?lat=${value.lat}&lon=${value.lon}&appid=20f9bba5f85da5ce36767f2e2ee73f95`
-        )
-          .then((res) => res.json())
-          .then(
-            (data) => (
-              (wealthValue.textContent = data.weather[0].description),
-              (tempValue.textContent = data.main.temp + " temp"),
-              (feelsValue.textContent = data.main.feels_like + " feels"),
-              (speedValue.textContent = data.wind.speed + " km"),
-              (degValue.textContent = data.wind.deg + " deg")
-            )
-          );
+        let elItems = document.createElement('li')
+        let elButton = document.createElement('button')
+
+        elButton.textContent = value.name
+
+        elButton.dataset.lat = value.lat
+        elButton.dataset.lon = value.lon
+
+        elButton.style.width = '222px'
+        elButton.style.padding = '10px'
+        elButton.style.border = 'none'
+        elButton.style.backgroundColor = '#fff'
+        elButton.style.boxShadow = '0 0 5px 0px rgb(204, 199, 199)'
+
+        elButton.addEventListener('click', clickBtn)
+
+        elItems.append(elButton)
+        elList.append(elItems)
       })
     );
 }
 
-elForm.addEventListener("submit", handleClick);
-
-// function handleClickBtn() {
-//   fetch(
-//     `http://api.openweathermap.org/geo/1.0/direct?q=toshkent&limit=1&appid=20f9bba5f85da5ce36767f2e2ee73f95`
-//   )
-//     .then((res) => res.json())
-//     .then(
-//       (data) =>
-//         data.forEach((value) => {
-//           countyBtn.dataset.lat = value.lat;
-//           countyBtn.dataset.lon = value.lon;
-
-//           fetch(
-//             `http://api.openweathermap.org/data/2.5/weather?lat=${value.lat}&lon=${value.lon}&appid=20f9bba5f85da5ce36767f2e2ee73f95`
-//           )
-//             .then((res) => res.json())
-//             .then((data) => console.log(data));
-//         }),
-//       (window.location = "/info.html")
-//     );
-// }
-
-// countyBtn.addEventListener("click", handleClickBtn);
-
-// function backBtn() {
-//   console.log("qala");
-// }
-
-// exitBtn.addEventListener("click", backBtn);
-
-// fetch(
-//   `http://api.openweathermap.org/geo/1.0/direct?q=toshkent&limit=1&appid=20f9bba5f85da5ce36767f2e2ee73f95`
-// )
-//   .then((res) => res.json())
-//   .then((data) =>
-//     data.forEach((value) => {
-//       fetch(
-//         `http://api.openweathermap.org/data/2.5/weather?lat=${value.lat}&lon=${value.lon}&appid=20f9bba5f85da5ce36767f2e2ee73f95`
-//       )
-//         .then((res) => res.json())
-//         .then(
-//           (data) => (
-//             console.log(data),
-//             (weather.textContent = data.weather[0].description),
-//             (temp.textContent = data.main.temp + " temp"),
-//             (feels.textContent = data.main.feels_like + " feels"),
-//             (speed.textContent = data.wind.speed + " km"),
-//             (deg.textContent = data.wind.deg + " deg")
-//           )
-//         );
-//     })
-//   );
+elInput.addEventListener("input", handleClick);
