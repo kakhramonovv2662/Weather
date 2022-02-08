@@ -440,4 +440,13 @@ button:active {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.father__title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: yellow;
+}
 /*# sourceMappingURL=main.css.map */

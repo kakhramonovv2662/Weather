@@ -6,6 +6,7 @@ let weatherImg = document.querySelector('.js-img')
 let rainImg = document.querySelector('.js-rain-img')
 let winterImg = document.querySelector('.js-winter-img')
 
+let elTitle = document.querySelector('.js-title')
 let wealthValue = document.querySelector(".js-weath");
 let tempValue = document.querySelector(".js-temp");
 let feelsValue = document.querySelector(".js-feels");
@@ -23,6 +24,7 @@ fetch(
   .then((res) => res.json())
   .then(
     (data) => (
+      elTitle.textContent = data.name,
       wealthValue.textContent = data.weather[0].main,
       tempValue.textContent = data.main.temp + " temp",
       feelsValue.textContent = data.main.feels_like + " feels",

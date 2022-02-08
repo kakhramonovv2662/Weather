@@ -171,4 +171,13 @@
     align-items: center;
     justify-content: center;
   }
+
+  &__title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: yellow;
+  }
 }
