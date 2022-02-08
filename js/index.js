@@ -1,17 +1,9 @@
 let elWrapper = document.querySelector(".js-wrapper");
-
-let elForm = document.querySelector(".js-form");
-const elInput = document.querySelector(".js-input");
-const elBtn = document.querySelector(".js-submit-btn");
-
 let elList = document.querySelector('.hero__list')
-let elListItems = document.querySelector('.js__items')
-let elListText = document.querySelector('.js__texts')
-let elListSecondText = document.querySelector('.js__second-texts')
-let elListThreeText = document.querySelector('.js__three-texts')
 
 
-let countyBtn = document.querySelector(".js-btn");
+
+const elInput = document.querySelector(".js-input");
 
 function submitBtn(evt) {
   fetch(
@@ -20,7 +12,6 @@ function submitBtn(evt) {
     .then((res) => res.json())
     .then((data) =>
       data.forEach((value) => {
-        console.log(value);
       })
     );
 
