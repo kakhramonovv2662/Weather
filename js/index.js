@@ -30,7 +30,7 @@ function submitBtn(evt) {
     localStorage.setItem('lat', elLat)
     localStorage.setItem('lon', elLon)
 
-    window.location = '/info.html'
+    window.location = 'https://weather-about.netlify.app/info.html'
 }
 elWrapper.addEventListener("click", submitBtn);
 
@@ -39,7 +39,7 @@ function clickBtn(evt) {
   localStorage.setItem('lat', evt.target.dataset.lat)
   localStorage.setItem('lon', evt.target.dataset.lon)
 
-  window.location = '/info.html'
+  window.location = 'https://weather-about.netlify.app/info.html'
 }
 
 function handleClick(evt) {

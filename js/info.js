@@ -32,7 +32,7 @@ fetch(
   );
 
 function backBtn() {
-  window.location = "/index.html";
+  window.location = "https://weather-about.netlify.app/index.html";
 }
 
 exitBtn.addEventListener("click", backBtn);
