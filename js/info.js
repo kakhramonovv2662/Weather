@@ -24,7 +24,7 @@ fetch(
   .then(
     (data) => (
       console.log(data),
-      wealthValue.textContent = data.weather[0].main,
+      // wealthValue.textContent = data.weather[0].main,
       tempValue.textContent = data.main.temp + " temp",
       feelsValue.textContent = data.main.feels_like + " feels",
       speedValue.textContent = data.wind.speed + " km",
@@ -33,7 +33,7 @@ fetch(
   );
 
 function backBtn() {
-  window.location = "\/index.html";
+  window.location = "/index.html";
 }
 
 exitBtn.addEventListener("click", backBtn);
