@@ -443,8 +443,6 @@ button:active {
 
 .father__title {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 25px;
   margin-bottom: 25px;
   color: red;
