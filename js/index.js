@@ -37,7 +37,7 @@ function handleClick(evt) {
   elList.textContent = null
 
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${evt.target.value}&limit=5&appid=20f9bba5f85da5ce36767f2e2ee73f95`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${evt.target.value}&limit=5&appid=20f9bba5f85da5ce36767f2e2ee73f95`
   )
     .then((res) => res.json())
     .then((data) =>
