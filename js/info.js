@@ -17,13 +17,6 @@ let weatheImages = document.querySelector('.js-weather-img')
 let localstrogeLat = localStorage.getItem('lat')
 let localstrogeLon = localStorage.getItem('lon')
 
-function backBtn() {
-  window.location = "https://weather-about.netlify.app/index.html";
-}
-
-exitBtn.addEventListener("click", backBtn);
-
-
 fetch(
   `http://api.openweathermap.org/data/2.5/weather?lat=${localstrogeLat}&lon=${localstrogeLon}&appid=20f9bba5f85da5ce36767f2e2ee73f95`
 )
@@ -37,6 +30,13 @@ fetch(
       degValue.textContent = data.wind.deg + " deg"
     )
   );
+
+function backBtn() {
+  window.location = "https://weather-about.netlify.app/index.html";
+}
+
+exitBtn.addEventListener("click", backBtn);
+
 
   function weatherImages() {
     setTimeout(() => {
